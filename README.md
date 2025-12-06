@@ -21,6 +21,7 @@ a full-stack system with secure authentication, a clean API, and a basic UI that
 | **Frontend** | React (Vite) |
 | **Containerization** | Docker + docker-compose |
 
+
 ## 📁 Project Structure
 
 ```
@@ -30,5 +31,13 @@ a full-stack system with secure authentication, a clean API, and a basic UI that
 └── README.md
 ```
 
+## 📋 Implementation Order
 
-
+1. **Backend Setup** - FastAPI app structure, config, database connection
+2. **Models & Schemas** - User model, Pydantic schemas
+3. **Auth** - Password hashing, JWT generation/validation, login endpoint
+4. **Team Routes** - GET /team, PATCH /me/status with auth protection
+5. **Seed Script** - Create the 4 users
+6. **Frontend** - Login page, Dashboard with status update & filtering
+7. **Docker** - Dockerfiles + docker-compose
+8. **README** - Add clear run instructions to the file
