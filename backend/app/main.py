@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.database import engine, Base
-from app.routes import auth
+from app.routes import auth, team
 
 # Import models so they're registered with Base
 from app import models  # noqa
@@ -35,6 +35,7 @@ app.add_middleware(
 
 # Include routers
 app.include_router(auth.router)
+app.include_router(team.router)
 
 
 @app.get("/health")
